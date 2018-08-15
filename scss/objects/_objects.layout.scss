@@ -1,0 +1,55 @@
+// /* ==========================================================================
+//    #LAYOUT
+//    ========================================================================== */
+
+body {
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  color: $black;
+  background-color: $white;
+}
+
+.logo {
+  padding-left: 55px;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: $black;
+}
+
+p {
+  font-size: 18px;
+}
+
+a {
+  color: $black;
+}
+
+.small {
+  font-size: 14px;
+}
+
+.layout-container {
+  width: 100%;
+}
+
+.s-container {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.b-container {
+  width: 100%;
+}
+
+.xs-container {
+  max-width: 1530px;
+  width: 100%;
+  margin: 0 auto;
+}

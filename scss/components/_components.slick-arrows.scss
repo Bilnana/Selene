@@ -1,0 +1,49 @@
+.slick-arrow {
+  font-size: 0;
+  background-color: $white;
+  width: 50px;
+  height: 50px;
+  border: 1px solid $grey-primary;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.slick-prev {
+  position: absolute;
+  top: 30px;
+  left: 70px;
+
+  @include mq(to768) {
+    top: -100px;
+    left: 50%;
+  }
+
+  @extend %icomoon;
+
+  &::before {
+    @extend .icon-left-arrow;
+
+    color: $grey-primary;
+    font-size: 24px;
+  }
+}
+
+.slick-next {
+  position: absolute;
+  bottom: 30px;
+  left: 70px;
+
+  @include mq(to768) {
+    bottom: -100px;
+    left: 50%;
+  }
+
+  @extend %icomoon;
+
+  &::before {
+    @extend .icon-right-arrow;
+
+    color: $grey-primary;
+    font-size: 24px;
+  }
+}

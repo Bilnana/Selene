@@ -1,0 +1,35 @@
+/* ==========================================================================
+   #LIST MENU
+   ========================================================================== */
+   
+.menu {
+  display: flex;
+  align-items: center;
+
+  @include mq(to768) {
+    display: none;
+  }
+
+  .menu__item {
+    margin-right: 72px;
+
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 600;
+      padding-bottom: 8px;
+      transition: color 0.3s ease-in;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      a {
+        border-bottom: 3px solid $grey-primary;
+      }
+    }
+  }
+}
+

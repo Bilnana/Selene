@@ -1,0 +1,41 @@
+// /* ==========================================================================
+//    #BUTTONS
+//    ========================================================================== *
+
+.btn {
+  padding: 20px 0;
+  text-decoration: none;
+  border-radius: 30px;
+  max-width: 217px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  font-size: 18px;
+  margin-top: 55px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: darken($blue-primary, 5%);
+  }
+
+  &-blue {
+    background-color: $blue-primary;
+
+    @include mq(to768) {
+      margin: 50px auto;
+    }
+  }
+}
+
+.icon-search {
+  padding-right: 55px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    color: $grey-primary;
+  }
+}
+

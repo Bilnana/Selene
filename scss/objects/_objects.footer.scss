@@ -1,0 +1,22 @@
+/* ==========================================================================
+   #FOOTER
+   ========================================================================== */
+
+footer {
+  background-color: $black;
+  padding: 75px 0;
+  text-align: center;
+
+  .footer__main {
+
+    img {
+      width: 151px;
+      height: 70px;
+    }
+
+    p {
+      color: $grey-primary;
+      margin-top: 25px;
+    }
+  }
+}
