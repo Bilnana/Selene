@@ -47,3 +47,70 @@
     font-size: 24px;
   }
 }
+
+.slick-dots {
+  display: flex;
+  align-items: center;
+  padding-left: 238px;
+  position: absolute;
+  bottom: -250px;
+
+  @include mq(to768) {
+    padding-left: 125px;
+  }
+
+  li {
+    margin-left: 30px;
+    position: relative;
+
+    button {
+      background-color: transparent;
+      border: none;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      font-size: 22px;
+      color: $grey-primary;
+      font-weight: 600;
+
+      &::before {
+        content: '0';
+      }
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &::before {
+      content: '';
+      width: 40px;
+      height: 2px;
+      background-color: $grey-primary;
+      position: absolute;
+      top: 19.5px;
+      left: 0;
+      opacity: 0;
+      transition: all 0.2s ease-in;
+    }
+
+    &:hover {
+
+      button {
+        color: $black;
+      }
+    }
+  }
+
+  .slick-active {
+
+    button {
+      color: $black;
+    }
+
+    &::before {
+      opacity: 1;
+      background-color: $black;
+    }
+  }
+}

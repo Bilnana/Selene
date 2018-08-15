@@ -31,8 +31,9 @@ function beforeAfterSlider () {
 }
 
 function slickSlider () {
-  $('.t-slider').slick();
-  console.log('hghgfhgfhgfhgf');
+  $('.t-slider').slick({
+    dots: true
+  });
 }
 
 
