@@ -2,6 +2,14 @@ $( document ).ready(function() {
   beforeAfterSlider();
   mobileMenu();
   slickSlider();
+
+  $('.b-slider').slick({
+    slidesToShow: 1,
+   // slidesToScroll: 1,
+    arrows: true,
+    //fade: true,
+    //asNavFor: '.slider-nav'
+  });
 });
 
 // //Mobile menu

@@ -77,23 +77,11 @@
   align-items: center;
 }
 
-.work__inner {
+.work {
   background-image: url('../../img/b.png');
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
-  padding: 0 0 120px;
-
-  // &::before {
-  //   content: '';
-  //   width: 100%;
-  //   height: 100%;
-  //   background: rgba(255,255,255,1);
-  //   position: absolute;
-  //   top: -50px;
-  //   left: 0;
-  //   right: 0;
-  // }
+  height: 670px;
 }
-
 
