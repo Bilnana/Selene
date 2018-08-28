@@ -16,6 +16,21 @@
     border: none;
     width: 105px;
     height: 105px;
+
+    @include mq(to768) {
+      width: 50px;
+      height: 50px;
+      background-color: transparent;
+    }
+
+    @include mq(from768to1200) {
+      width: 80px;
+      height: 80px;
+    }
+
+    &:hover {
+      background-color: $blue-hover;
+    }
   }
 }
 
@@ -48,9 +63,13 @@
     top: calc(50% - 105px);
     left: calc(50% - 52.5px);
 
-    @include mq(to768) {
-      top: -100px;
-      left: 50%;
+    @include mq(to1200) {
+      top: 15%;
+      left: 0;
+    }
+
+    @include mq(from768to1200) {
+      top: 33%;
     }
 
     &::before {
@@ -90,8 +109,13 @@
     left: calc(50% - 52.5px);
 
     @include mq(to768) {
-      bottom: -100px;
-      left: 50%;
+      top: 15%;
+      left: calc(100% - 50px);
+    }
+
+    @include mq(from768to1200) {
+      top: 33%;
+      left: calc(100% - 80px);
     }
 
     &::before {

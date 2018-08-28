@@ -75,6 +75,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include mq(to1200) {
+    display: none;
+  }
 }
 
 .work {
@@ -84,4 +88,8 @@
   background-repeat: no-repeat;
   height: 670px;
 }
+
+.latest-projects {
+  position: relative;
+} 
 

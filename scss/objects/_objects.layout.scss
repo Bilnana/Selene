@@ -46,6 +46,15 @@ a {
 
 .b-container {
   width: 100%;
+
+  @include mq(to1200) {
+    padding: 0 20px;
+    margin: 50px 0;
+  }
+}
+
+.l-container {
+  width: 100%;
 }
 
 .xs-container {

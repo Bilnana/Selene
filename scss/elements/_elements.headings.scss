@@ -38,6 +38,10 @@ h2 {
 
 h3 {
   @include inuit-font-size($inuit-font-size-h3);
+
+  @include mq(to768) {
+    font-size: 24px;
+  }
 }
 
 h4 {

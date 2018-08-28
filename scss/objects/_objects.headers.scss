@@ -26,6 +26,14 @@
       background-color: $grey-primary;
       position: absolute;
       top: 45%;
+
+      @include mq(to768) {
+        display: none;
+      }
+
+      @include mq(from768to1200) {
+        width: 50px;
+      }
     }
 
     &::before {
@@ -34,6 +42,20 @@
 
     &::after {
       right: 120px;
+    }
+  }
+
+  .latest-projects & {
+    position: absolute;
+    top: -215px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: $white;
+
+    @include mq(to768) {
+      position: static;
     }
   }
 }

@@ -74,26 +74,48 @@
   .b-slider__item {
     display: flex;
     align-items: center;
+
+    @include mq(to1200) {
+      flex-direction: column;
+    }
   
     .b-slider__desc {
       width: 50%;
       padding: 0 120px 0;
       position: relative;
+
+      @include mq(to1200) {
+        width: 100%;
+        padding: 60px 20px;
+      }
       
       h3 {
         font-weight: 700;
         width: 60%;
+
+        @include mq(to1200) {
+          width: 100%;
+        }
       }
 
       p {
         line-height: 3;
         margin-top: 50px;
         color: $color-paragraph;
+
+        @include mq(to768) {
+          margin-top: 20px;
+          line-height: 2.5;
+        }
       }
     }
   
     .b-slider__image {
       width: 50%;
+
+      @include mq(to1200) {
+        width: 100%;
+      }
     }
 
     .b-slider__num {
@@ -104,6 +126,66 @@
       top: -120px;
       right: 80px;
       z-index: -1;
+
+      @include mq(to768) {
+        top: 0;
+        right: 23%;
+      }
+
+      @include mq(from768to1200) {
+        top: -15%;
+        right: 40%;
+      }
+    }
+  }
+}
+
+.b-slider__nav {
+  max-width: 865px;
+  margin: 0 auto;
+
+  @include mq(to768) {
+    display: none;
+  }
+
+  .slick-track {
+    display: flex;
+    justify-content: space-between;
+    margin: 32px 0;
+  }
+
+  .b-slider__item {
+    cursor: pointer;
+    position: relative;
+    max-width: 220px;
+    margin-left: 20px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      border: 15px solid $blue-primary;
+      opacity: 0;
+      transition: all 0.2s ease-in;
+
+      @include mq(to768) {
+        border: 3px solid $blue-primary;
+      }
+    }
+
+    &:hover::before,
+    &.slick-current:before {
+      opacity: 1;
     }
   }
 }
