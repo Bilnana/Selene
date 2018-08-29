@@ -10,10 +10,10 @@
     width: 25%;
     position: relative;
     cursor: pointer;
-		
-		@include mq(to1200) {
-			width: 50%;
-		}
+
+    @include mq(to1200) {
+      width: 50%;
+    }
 
     h2 {
       color: $white;
@@ -28,7 +28,7 @@
       width: calc(100% - 42px);
       height: calc(100% - 42px);
       position: absolute;
-      top:0;
+      top: 0;
       left: 0;
       right: 0;
       bottom: 0;
@@ -74,6 +74,60 @@
       @include mq(to768) {
         top: 40%;
       }
+    }
+  }
+}
+
+.l-partners {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 130px 0;
+
+  @include mq(to768) {
+    padding: 80px 0;
+  }
+
+  .l-partners__item {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: auto;
+      height: auto;
+    }
+  }
+}
+
+.l-contact {
+  display: flex;
+  align-items: center;
+
+  .l-contact__item {
+    margin-left: 40px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    a {
+      font-weight: 600;
+      text-transform: uppercase;
+      color: $color-paragraph;
+    }
+
+    &:hover {
+      a {
+        color: $blue-primary;
+      }
+
+      border-bottom: 1px solid $blue-primary;
     }
   }
 }

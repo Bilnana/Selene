@@ -5,27 +5,25 @@
 .btn {
   padding: 20px 0;
   text-decoration: none;
-  border-radius: 30px;
-  max-width: 217px;
+  max-width: 184px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: $white;
+  color: $color-paragraph;
   font-size: 18px;
-  margin-top: 55px;
+  cursor: pointer;
+  text-transform: uppercase;
   transition: all 0.2s ease-in-out;
+  border: 2px solid $color-paragraph;
 
   &:hover {
-    background-color: darken($blue-primary, 5%);
+    border: 2px solid $blue-primary;
+    color: $blue-primary;
   }
 
-  &-blue {
-    background-color: $blue-primary;
-
-    @include mq(to768) {
-      margin: 50px auto;
-    }
+  &-white {
+    background-color: $white;
   }
 }
 

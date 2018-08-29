@@ -19,7 +19,8 @@
     margin: 0 auto;
     position: relative;
 
-    &::before, &::after {
+    &::before,
+    &::after {
       content: "";
       width: 120px;
       height: 1.5px;

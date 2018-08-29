@@ -1,6 +1,5 @@
 .slick-arrow {
   font-size: 0;
-  
   cursor: pointer;
   z-index: 1;
 
@@ -171,7 +170,6 @@
     }
 
     &:hover {
-
       button {
         color: $black;
       }
@@ -179,7 +177,6 @@
   }
 
   .slick-active {
-
     button {
       color: $black;
     }

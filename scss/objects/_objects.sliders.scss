@@ -70,7 +70,6 @@
 }
 
 .b-slider {
-
   .b-slider__item {
     display: flex;
     align-items: center;
@@ -78,7 +77,7 @@
     @include mq(to1200) {
       flex-direction: column;
     }
-  
+
     .b-slider__desc {
       width: 50%;
       padding: 0 120px 0;
@@ -88,7 +87,7 @@
         width: 100%;
         padding: 60px 20px;
       }
-      
+
       h3 {
         font-weight: 700;
         width: 60%;
@@ -109,7 +108,7 @@
         }
       }
     }
-  
+
     .b-slider__image {
       width: 50%;
 
@@ -184,7 +183,7 @@
     }
 
     &:hover::before,
-    &.slick-current:before {
+    &.slick-current::before {
       opacity: 1;
     }
   }
