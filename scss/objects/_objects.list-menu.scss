@@ -5,13 +5,52 @@
 .menu {
   display: flex;
   align-items: center;
+  position: relative;
 
   @include mq(to768) {
-    display: none;
+    flex-direction: column;
+    width: 95%;
+    background-color: $color-paragraph;
+    margin: 0 auto;
+    border-radius: 7px;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: 5;
+
+    &::before {
+      content: '';
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: -20px;
+      left: 12px;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 20px solid $color-paragraph;
+    }
+  }
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
   }
 
   .menu__item {
     margin-right: 72px;
+
+    @include mq(to768) {
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      padding: 15px 0;
+      text-align: center;
+      //border-bottom: 1px solid $color-paragraph;
+    }
 
     a {
       text-decoration: none;
@@ -19,10 +58,18 @@
       font-weight: 600;
       padding-bottom: 8px;
       transition: color 0.3s ease-in;
+
+      @include mq(to768) {
+        color: $white;
+      }
     }
 
     &:last-child {
       margin-right: 0;
+
+      @include mq(to768) {
+        margin: auto;
+      }
     }
 
     &:hover {

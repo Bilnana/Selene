@@ -147,12 +147,6 @@
     display: none;
   }
 
-  .slick-track {
-    display: flex;
-    justify-content: space-between;
-    margin: 32px 0;
-  }
-
   .b-slider__item {
     cursor: pointer;
     position: relative;
@@ -186,5 +180,11 @@
     &.slick-current::before {
       opacity: 1;
     }
+  }
+
+  .slick-track {
+    display: flex;
+    justify-content: space-between;
+    margin: 32px 0;
   }
 }

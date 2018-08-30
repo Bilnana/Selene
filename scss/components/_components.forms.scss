@@ -49,3 +49,64 @@
     }
   }
 }
+
+.f-search {
+  padding-right: 55px;
+  max-width: 380px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+
+  @include mq(to768) {
+    padding-right: 20;
+  }
+
+  .f-search__control {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid $color-paragraph;
+    height: 35px;
+    width: 0;
+    transition: width 0.3s ease-in;
+
+    @include mq(to768) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: $white;
+      z-index: 5;
+      height: 50px;
+      width: 0;
+      border-bottom: 2px solid $white;
+
+      &.extended {
+
+        .s-device & {
+          width: 100%;
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+
+  .icon-search {
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      color: $grey-primary;
+    }
+  }
+
+  &:hover {
+    .b-device & {
+      .f-search__control {
+        width: 90%;
+      }
+    }
+  }
+}

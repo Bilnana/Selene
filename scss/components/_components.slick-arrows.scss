@@ -29,6 +29,10 @@
 
     &:hover {
       background-color: $blue-hover;
+
+      @include mq(to768) {
+        background-color: transparent;
+      }
     }
   }
 }
