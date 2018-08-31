@@ -213,32 +213,38 @@
     <div class="contact">
       <div class="contact__header">
         <ul class="l-contact">
-          <li class="l-contact__item">
-            <a href="">Contact Us</a>
+          <li class="l-contact__item active">
+            <a href="javascript:;">Contact Us</a>
           </li>
           <li class="l-contact__item">
-            <a href="">Name</a>
+            <a href="javascript:;" id="name">Name</a>
           </li>
           <li class="l-contact__item">
-            <a href="">Phone</a>
+              <a href="javascript:;" id="phone">Phone</a>
+            </li>
+          <li class="l-contact__item">
+            <a href="javascript:;" id="email">Email</a>
+          </li>
+          <li class="l-contact__item">
+            <a href="javascript:;" id="message">Message</a>
           </li>
         </ul>
       </div>
       <div class="f-contact">
         <div class="f-contact__item">
-          <input type="text" name="name" class="f-contact__controls"/>
+          <input type="text" name="name" class="f-contact__controls" data-index="name"/>
           <label class="f-contact-title">Name</label>
         </div>
         <div class="f-contact__item">
-          <input type="text" name="phone" class="f-contact__controls"/>
+          <input type="text" name="phone" class="f-contact__controls" data-index="phone"/>
           <label class="f-contact-title">Phone</label>
         </div>
         <div class="f-contact__item">
-          <input type="mail" name="email" class="f-contact__controls"/>
+          <input type="mail" name="email" class="f-contact__controls" data-index="email"/>
           <label class="f-contact-title">E-mail</label>
         </div>
         <div class="f-contact__item">
-          <textarea name="message" class="f-contact__controls message"></textarea>
+          <textarea name="message" class="f-contact__controls" data-index="message"></textarea>
           <label class="f-contact-title">Message</label>
         </div>
       </div>

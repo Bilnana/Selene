@@ -66,13 +66,14 @@
     top: calc(50% - 105px);
     left: calc(50% - 52.5px);
 
-    @include mq(to1200) {
+    @include mq(to768) {
       top: 15%;
       left: 0;
     }
 
     @include mq(from768to1200) {
-      top: 33%;
+      top: 30%;
+      left: 0;
     }
 
     &::before {
@@ -117,7 +118,7 @@
     }
 
     @include mq(from768to1200) {
-      top: 33%;
+      top: 30%;
       left: calc(100% - 80px);
     }
 

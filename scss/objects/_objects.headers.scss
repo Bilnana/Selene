@@ -13,6 +13,10 @@
     justify-content: space-between;
     padding: 25px 0;
   }
+
+  @include mq(from768to1200) {
+    flex-wrap: nowrap;
+  }
 }
 
 .header-section {
@@ -65,5 +69,11 @@
     @include mq(to768) {
       position: static;
     }
+  }
+}
+
+.contact__header {
+  @include mq(from768to1200) {
+    margin-bottom: 80px;
   }
 }

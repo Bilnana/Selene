@@ -42,6 +42,9 @@
 
   .menu__item {
     margin-right: 72px;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 10px;
 
     @include mq(to768) {
       margin: auto;
@@ -49,7 +52,10 @@
       height: 100%;
       padding: 15px 0;
       text-align: center;
-      //border-bottom: 1px solid $color-paragraph;
+    }
+
+    @include mq(from768to1200) {
+      margin-right: 60px;
     }
 
     a {
@@ -72,11 +78,19 @@
       }
     }
 
-    &:hover {
-      a {
-        border-bottom: 3px solid $grey-primary;
-      }
+    &::after {
+      content: '';
+      height: 3px;
+      width: 0;
+      background-color: $blue-primary;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: width 0.3s ease-in-out;
+    }
+
+    &:hover::after {
+      width: 100%;
     }
   }
 }
-

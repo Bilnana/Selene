@@ -4,16 +4,24 @@ $( document ).ready(function() {
   isSmallDevice ()
   slickSlider ();
   formValidation ();
+  contactForm ();
 });
 
 /* Mobile menu */
 function mobileMenu () {
   var btnMenu = $('.header__inner').find('.icon-menu');
 
-  btnMenu.on('click', function () {
+  btnMenu.on('click', function (e) {
     $(this).toggleClass('open');
     $('.menu').toggleClass('open');
   })
+
+  // $('body').on('click', function(e) {
+  //   if ($('.menu').hasClass('open')) {
+  //     $(".menu").toggleClass('open')
+  //   }
+  //   console.log('body');
+  // })
 }
 
 /* Icon search animation */
@@ -29,7 +37,7 @@ function iconSearch () {
 function isSmallDevice () {
   var width = $(window).width();
 
-  if (width <= 768) {
+  if (width <= 1200) {
     $('body').addClass('s-device')
   }
   else {
@@ -70,7 +78,6 @@ function slickSlider () {
     ]
   });
 
-
   $('.b-slider').on('afterChange', function () {
     var currIndex = $(this).find('.slick-current').attr('data-slick-index');
     var navSlide = $('.b-slider__nav').find('.slick-slide');
@@ -97,4 +104,28 @@ function formValidation () {
     }
     console.log('it work');
   });
+}
+
+/* Contact form activation */
+function contactForm (e) {
+  var contactLink = $('.l-contact__item a');
+  var contactControls = $('.f-contact__controls');
+  
+  contactLink.on('click', function () {
+    // e.preventDefault(); not needed if there is "javascript:;" label in href 
+    var linkId = $(this).attr('id');
+
+    $(this).parent().addClass('active').siblings().removeClass('active');
+    console.log(linkId);
+
+    $('.f-contact__item').find('.f-contact__controls[data-index="' + linkId + '"]').focus();
+  })
+
+  contactControls.on('click', function () {
+    var inputAttr = $(this).attr('data-index');
+
+    console.log(inputAttr);
+    $('.l-contact__item a[id="' + inputAttr + '"]').parent().addClass('active').siblings().removeClass('active');
+  })
+
 }

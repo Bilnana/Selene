@@ -82,6 +82,10 @@
     justify-content: flex-end;
     width: 20%;
   }
+
+  @include mq(from768to1200) {
+    padding-left: 60px;
+  }
 }
 
 .navigation-small {
