@@ -8,8 +8,11 @@
 
   .l-links__item {
     width: 25%;
-    position: relative;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 
     @include mq(to1200) {
       width: 50%;
@@ -20,7 +23,6 @@
       width: 100%;
       text-align: center;
       position: absolute;
-      top: 45%;
     }
 
     &::before {
@@ -28,11 +30,6 @@
       width: calc(100% - 42px);
       height: calc(100% - 42px);
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
     }
 
     &:hover {
@@ -61,15 +58,13 @@
 
   .work__item {
     width: 33.3%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
 
     h2 {
       position: absolute;
-      top: 30%;
-      left: 0;
-      right: 0;
-      margin: auto;
 
       @include mq(to768) {
         top: 40%;
