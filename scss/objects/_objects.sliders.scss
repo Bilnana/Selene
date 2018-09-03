@@ -118,21 +118,20 @@
     }
 
     .b-slider__num {
+      display: block;
       font-size: 450px;
       font-weight: 700;
       color: $color-numbers;
       position: absolute;
-      top: -120px;
+      top: calc((100% - 500px) / 2);
       right: 80px;
       z-index: -1;
 
       @include mq(to768) {
-        top: 0;
         right: 23%;
       }
 
       @include mq(from768to1200) {
-        top: -15%;
         right: 40%;
       }
     }
